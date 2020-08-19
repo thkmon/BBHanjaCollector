@@ -59,7 +59,6 @@ public class HanjaForm {
 				String newStr = HanjaUtil.getHanjaOnly(oldStr);
 				textArea.setText(newStr);
 				
-				printLine();
 				textArea.setFocusable(true);
 			}
 		});
@@ -73,7 +72,6 @@ public class HanjaForm {
 				String newStr = StringUtil.getSortedText(oldStr);
 				textArea.setText(newStr);
 				
-				printLine();
 				textArea.setFocusable(true);
 			}
 		});
@@ -87,7 +85,6 @@ public class HanjaForm {
 				String newStr = StringUtil.getDuplRemovedText(oldStr);
 				textArea.setText(newStr);
 				
-				printLine();
 				textArea.setFocusable(true);
 			}
 		});
@@ -101,15 +98,5 @@ public class HanjaForm {
 		plusTopLittle(1);
 		
 		bForm.open();
-	}
-	
-	public static void printLine() {
-//		try {
-//			int currentLineNumber = textArea.getCaretLineNumber() + 1;
-//			String str = "(" + currentLineNumber + "/" + textArea.getLineCount() + ")"; 
-//			label.setText(str);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
 	}
 }
