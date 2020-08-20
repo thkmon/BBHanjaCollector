@@ -54,7 +54,7 @@ public class HanjaForm {
 		button.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
-				System.out.println("한자만 수집 실행");
+				//System.out.println("한자만 수집 실행");
 				String oldStr = textArea.getText();
 				String newStr = HanjaUtil.getHanjaOnly(oldStr);
 				textArea.setText(newStr);
