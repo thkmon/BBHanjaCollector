@@ -7,7 +7,7 @@ import java.util.HashMap;
 public class StringUtil {
 	
 	/**
-	 * Á¤·Ä
+	 * ì •ë ¬
 	 * 
 	 * @param str
 	 * @return
@@ -44,7 +44,7 @@ public class StringUtil {
 	}
 	
 	/**
-	 * Áßº¹Á¦°Å. ÇÑ ±ÛÀÚ ´ÜÀ§·Î °³Çà
+	 * ì¤‘ë³µì œê±°. í•œ ê¸€ì ë‹¨ìœ„ë¡œ ê°œí–‰.
 	 * 
 	 * @param str
 	 * @return

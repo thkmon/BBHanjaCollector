@@ -84,7 +84,7 @@ public class HanjaUtil {
 		// 원래는 [\u20000-\u2a6df\u2f800-\u2fa1f] 까지 포함되어 있었는데 
 		// 역슬래시u + 5자리 유니코드는 일반적이지도 않고, (보통 역슬래시u + 4자리)
 		// 숫자랑 일반 알파벳이 섞여있어서, 5자리 유니코드는 뺐음.
-		String regEx = ".*[\u2e80-\u2eff\u31c0-\u31ef\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fbf\uf900-\ufaff].*";
+		String regEx = "[\u2e80-\u2eff\u31c0-\u31ef\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fbf\uf900-\ufaff]";
 		
 		StringBuffer buff = new StringBuffer();
 		
@@ -93,9 +93,6 @@ public class HanjaUtil {
 		for (int i=0; i<len; i++) {
 			oneMark = str.substring(i, i+1);
 			if (oneMark.matches(regEx)) {
-				if (buff.length() > 0) {
-					buff.append("\n");
-				}
 				buff.append(oneMark);
 			}
 		}

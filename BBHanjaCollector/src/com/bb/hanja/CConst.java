@@ -4,7 +4,7 @@ import java.awt.Color;
 
 public class CConst {
 	
-	public static String version = "200819";
+	public static String version = "200822";
 	
 	public static Color buttonColor = new Color(200, 200, 200);
 	public static Color buttonTextColor = new Color(0, 0, 0);
