@@ -2,18 +2,18 @@ package com.bb.hanja;
 
 public class HanjaUtil {
 /*
-	(Âü°í 1) À¯´ÏÄÚµå ¹üÀ§
-	2E80 2EFF CJK Radicals Supplement ÇÑÁßÀÏ ºÎ¼ö º¸Ãæ 
-	31C0 31EF CJK Strokes ÇÑÁßÀÏ ÇÑÀÚ È¹ 
-	3200 32FF Enclosed CJK Letters and Months ÇÑÁßÀÏ °ýÈ£ ¹®ÀÚ 
-	3400 4DBF CJK Unified Ideographs Extension A ÇÑÁßÀÏ ÅëÇÕ ÇÑÀÚ È®Àå-A 
-	4E00 9FBF CJK Unified Ideographs ÇÑÁßÀÏ ÅëÇÕ ÇÑÀÚ 
-	F900 FAFF CJK Compatibility Ideographs ÇÑÁßÀÏ È£È¯¿ë ÇÑÀÚ 
-
-	(Âü°í 2)
-	¿ø·¡´Â [\u20000-\u2a6df\u2f800-\u2fa1f] ±îÁö Æ÷ÇÔµÇ¾î ÀÖ¾ú´Âµ¥ 
-	¿ª½½·¡½Ãu + 5ÀÚ¸® À¯´ÏÄÚµå´Â ÀÏ¹ÝÀûÀÌÁöµµ ¾Ê°í, (º¸Åë ¿ª½½·¡½Ãu + 4ÀÚ¸®)
-	¼ýÀÚ¶û ÀÏ¹Ý ¾ËÆÄºªÀÌ ¼¯¿©ÀÖ¾î¼­, 5ÀÚ¸® À¯´ÏÄÚµå´Â »°À½.
+	(ì°¸ê³  1) ìœ ë‹ˆì½”ë“œ ë²”ìœ„
+	2E80 2EFF CJK Radicals Supplement í•œì¤‘ì¼ ë¶€ìˆ˜ ë³´ì¶© 
+	31C0 31EF CJK Strokes í•œì¤‘ì¼ í•œìž íš 
+	3200 32FF Enclosed CJK Letters and Months í•œì¤‘ì¼ ê´„í˜¸ ë¬¸ìž 
+	3400 4DBF CJK Unified Ideographs Extension A í•œì¤‘ì¼ í†µí•© í•œìž í™•ìž¥-A 
+	4E00 9FBF CJK Unified Ideographs í•œì¤‘ì¼ í†µí•© í•œìž 
+	F900 FAFF CJK Compatibility Ideographs í•œì¤‘ì¼ í˜¸í™˜ìš© í•œìž 
+	
+	(ì°¸ê³  2)
+	ì›ëž˜ëŠ” [\u20000-\u2a6df\u2f800-\u2fa1f] ê¹Œì§€ í¬í•¨ë˜ì–´ ìžˆì—ˆëŠ”ë° 
+	ì—­ìŠ¬ëž˜ì‹œu + 5ìžë¦¬ ìœ ë‹ˆì½”ë“œëŠ” ì¼ë°˜ì ì´ì§€ë„ ì•Šê³ , (ë³´í†µ ì—­ìŠ¬ëž˜ì‹œu + 4ìžë¦¬)
+	ìˆ«ìžëž‘ ì¼ë°˜ ì•ŒíŒŒë²³ì´ ì„žì—¬ìžˆì–´ì„œ, 5ìžë¦¬ ìœ ë‹ˆì½”ë“œëŠ” ëºìŒ.
 	
 	20021 : !
 	20022 : "
@@ -80,10 +80,10 @@ public class HanjaUtil {
 		if (str == null || str.length() == 0) {
 			return "";
 		}
-
-		// ¿ø·¡´Â [\u20000-\u2a6df\u2f800-\u2fa1f] ±îÁö Æ÷ÇÔµÇ¾î ÀÖ¾ú´Âµ¥ 
-		// ¿ª½½·¡½Ãu + 5ÀÚ¸® À¯´ÏÄÚµå´Â ÀÏ¹ÝÀûÀÌÁöµµ ¾Ê°í, (º¸Åë ¿ª½½·¡½Ãu + 4ÀÚ¸®)
-		// ¼ýÀÚ¶û ÀÏ¹Ý ¾ËÆÄºªÀÌ ¼¯¿©ÀÖ¾î¼­, 5ÀÚ¸® À¯´ÏÄÚµå´Â »°À½.
+		
+		// ì›ëž˜ëŠ” [\u20000-\u2a6df\u2f800-\u2fa1f] ê¹Œì§€ í¬í•¨ë˜ì–´ ìžˆì—ˆëŠ”ë° 
+		// ì—­ìŠ¬ëž˜ì‹œu + 5ìžë¦¬ ìœ ë‹ˆì½”ë“œëŠ” ì¼ë°˜ì ì´ì§€ë„ ì•Šê³ , (ë³´í†µ ì—­ìŠ¬ëž˜ì‹œu + 4ìžë¦¬)
+		// ìˆ«ìžëž‘ ì¼ë°˜ ì•ŒíŒŒë²³ì´ ì„žì—¬ìžˆì–´ì„œ, 5ìžë¦¬ ìœ ë‹ˆì½”ë“œëŠ” ëºìŒ.
 		String regEx = "[\u2e80-\u2eff\u31c0-\u31ef\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fbf\uf900-\ufaff]";
 		
 		StringBuffer buff = new StringBuffer();
